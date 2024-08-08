@@ -43,20 +43,20 @@
   you modded 1.16.4, find the 1.16.4 folder). Duplicate that folder, and rename it. For me, I was modifying villagers so
   I called it "1.16.4_villager_mod".
 
-8. Go into that folder and delete the original Minecraft JAR file. Then, rename the JSON file to be identical to the
+10. Go into that folder and delete the original Minecraft JAR file. Then, rename the JSON file to be identical to the
   folder name. For me, that made it "1.16.4_villager_mod.json".
 
-9. Using a text editor, find the first instance of "downloads": This tells Minecraft where to obtain the game JAR file.
+11. Using a text editor, find the first instance of "downloads": This tells Minecraft where to obtain the game JAR file.
   If you leave this in, Minecraft will automatically download the vanilla JAR. But we want to run your new modded JAR.
   So delete everything from that "downloads": through the client, server, and server_mappings headers, which finally end
   in `/server.txt"}},`. Once you remove that, this section should hold `"assets": "1.16", "complianceLevel": 1, "id": "1.16.4"`.
   The last thing we need to do in this JSON file is to change that ID field to match the name of the folder and the
   JSON file. So in this case, we want `"id":"1.16.4_villager_mod"`.
 
-10. Now, take your new JAR file from the build/libs/ directory, and copy it into this same version folder, and, for the
+12. Now, take your new JAR file from the build/libs/ directory, and copy it into this same version folder, and, for the
   final time, rename it to the new name we've been using - 1.16.4_villager_mod.jar.
 
-11. Using an archive manager (Ubuntu comes with one built in; Windows users can download 7-Zip), open the base version's
+13. Using an archive manager (Ubuntu and MacOS come with one built in; Windows users can download 7-Zip), open the base version's
   JAR file (in this case, 1.16.4.jar, which you'll find in its folder), and your JAR file. You'll need to copy 4
   files/folders from the base JAR into your new one.
 
@@ -65,9 +65,9 @@
     3. The file "pack.png"
     4. The file "pack.mcmeta"
 
-12. Finally, still in that archive manager, delete the META-INF folder from your new JAR.
+14. Finally, still in that archive manager, delete the META-INF folder from your new JAR.
 
-13. Your files should all be configured now. In the Minecraft launcher (close and reopen it if it's already open), go to
+15. Your files should all be configured now. In the Minecraft launcher (close and reopen it if it's already open), go to
   "Installations" in the upper left, and then create a new installation. Name it whatever you want. For the version, select
   the version you made (1.16.4_villager_mod.jar). Create it, then go back to the launcher home screen by clicking "Play" in
   the upper left. In the lower left, select your new custom version, and hit the big green "Play" button.
